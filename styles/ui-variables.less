@@ -1,0 +1,126 @@
+@import "syntax-variables";
+
+// Colors
+
+
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// // General colors
+// @syntax-text-color: #CDD3DE;
+// @syntax-cursor-color: #c0c5ce;
+// @syntax-selection-color: rgba(128, 203, 196, 0.13);
+// @syntax-background-color: #263238;
+//
+// // Guide colors
+// @syntax-wrap-guide-color: #65737e;
+// @syntax-indent-guide-color: #65737e;
+// @syntax-invisible-character-color: #65737e;
+//
+// // For find and replace markers
+// @syntax-result-marker-color: #65737e;
+// @syntax-result-marker-color-selected: #CDD3DE;
+//
+// // Gutter colors
+// @syntax-gutter-text-color: #CDD3DE;
+// @syntax-gutter-text-color-selected: #CDD3DE;
+// @syntax-gutter-background-color: #263238;
+// @syntax-gutter-background-color-selected: rgba(0, 0, 0, 0.19);
+//
+// // For git diff info. i.e. in the gutter
+// // These are static and were not extracted from your textmate theme
+// @syntax-color-renamed: #96CBFE;
+// @syntax-color-added: #A8FF60;
+// @syntax-color-modified: #E9C062;
+// @syntax-color-removed: #CC6666;
+
+@text-color: fade(@syntax-text-color, 60%);
+@text-color-subtle: fade(@syntax-text-color, 20%);
+@text-color-highlight: @syntax-text-color;
+@text-color-selected: @text-color-highlight;
+
+@text-color-info: #5293d8;
+@text-color-success: #2BDA77;
+@text-color-warning: #ff982d;
+@text-color-error: #c00;
+
+@text-color-ignored: @text-color-subtle;
+@text-color-added: @syntax-color-added;
+@text-color-renamed: @syntax-color-renamed;
+@text-color-modified: @syntax-color-modified;
+@text-color-removed: @syntax-color-removed;
+
+@app-background-color: @syntax-background-color;
+
+@background-color-info: @text-color-info;
+@background-color-success: @text-color-success;
+@background-color-warning: @text-color-warning;
+@background-color-error: @text-color-error;
+@background-color-highlight: rgba(255, 255, 255, 0.07);
+@background-color-selected: @syntax-selection-color;
+
+@base-background-color: lighten(@tool-panel-background-color, 5%);
+@base-border-color: rgba(0, 0, 0, 0.5);
+
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: rgba(0, 0, 0, 0.5);
+
+@input-background-color: transparent;
+@input-border-color: @base-border-color;
+
+@tool-panel-background-color: @app-background-color;
+@tool-panel-border-color: @base-border-color;
+
+@inset-panel-background-color: #161719;
+@inset-panel-border-color: @base-border-color;
+
+@panel-heading-background-color: #43484d;
+@panel-heading-border-color: fadein(@base-border-color, 10%);
+
+@overlay-background-color: blue;
+@overlay-border-color: green;
+
+@button-background-color: transparent;
+@button-background-color-hover: lighten(@button-background-color, 5%);
+@button-background-color-selected: darken(@button-background-color, 10%);
+@button-border-color: darken(@button-background-color, 10%);
+
+@tab-bar-background-color: darken(@app-background-color, 3%);
+@tab-bar-border-color: transparent;
+@tab-background-color: transparent;
+@tab-background-color-active: @app-background-color;
+@tab-border-color: darken(@tab-background-color, 10%);
+
+@tree-view-background-color: darken(@app-background-color, 3%);
+@tree-view-background-color-active: @app-background-color;
+@tree-view-border-color: @tool-panel-border-color;
+
+@scrollbar-background-color: darken(@app-background-color, 3%); // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-color: rgba(92, 92, 92, 0.5);
+
+@ui-site-color-1: @background-color-success; // green
+@ui-site-color-2: @background-color-info; // blue
+@ui-site-color-3: @background-color-warning; // orange
+@ui-site-color-4: #db2ff4; // purple
+@ui-site-color-5: #f5e11d; // yellow
+
+
+// Sizes
+
+@font-size: 11px;
+@input-font-size: 14px;
+
+@disclosure-arrow-size: 12px;
+
+@component-padding: 2px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+@component-border-radius: 2px;
+
+@tab-height: 44px;
+
+
+// Other
+
+@font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;

@@ -1,0 +1,90 @@
+@import "ui-variables";
+@modified-icon-width: 8px;
+@tab-max-width: 160px;
+
+.tab-bar {
+  height: @tab-height;
+  background: @tab-bar-background-color;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    position: relative;
+    max-width: @tab-max-width; height: @tab-height;
+    padding: 0 10px;
+
+    background: @tab-background-color;
+
+    color: @text-color;
+    line-height: @tab-height;
+
+    transition: color .1s ease-in;
+
+    .title {
+      position: relative;
+      z-index: 1;
+      padding-right: 10px
+    }
+
+    .close-icon {
+      right: 10px;
+      z-index: 3;
+      text-align: right;
+      line-height: @tab-height;
+      color: @text-color;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &:hover {
+      color: @text-color-highlight;
+    }
+
+    &.active {
+      z-index: 1;
+
+      background: @tab-background-color-active;
+
+      color: @text-color-highlight;
+
+      .close-icon {
+        line-height: @tab-height - 1px;
+        color: @text-color;
+      }
+    }
+
+    &.modified:hover {
+      .close-icon:hover {
+        color: @text-color-highlight;
+      }
+    }
+
+    &.modified:not(:hover) {
+      .close-icon {
+        right: 10px;
+        top: @tab-height/2 - @modified-icon-width/2 + 1px;
+        width: @modified-icon-width;
+        height: @modified-icon-width;
+      }
+    }
+  }
+
+  .placeholder {
+    width: 20px;
+    height: @tab-height;
+    margin-left: -10px; // center between tabs
+    pointer-events: none;
+
+    background: green;
+
+    &:after {
+      top: @tab-height - 2px;
+    }
+  }
+}

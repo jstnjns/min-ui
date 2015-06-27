@@ -1,0 +1,16 @@
+{
+  "name": "min-ui",
+  "theme": "ui",
+  "version": "0.2.1",
+  "description": "A minimal UI for Atom",
+  "keywords": [
+    "adaptive",
+    "minimal",
+    "ui"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/jstnjns/minimum-ui",
+  "engines": {
+    "atom": ">0.40.0"
+  }
+}
