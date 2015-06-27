@@ -9,7 +9,7 @@
     "ui"
   ],
   "license": "MIT",
-  "repository": "https://github.com/jstnjns/minimum-ui",
+  "repository": "https://github.com/jstnjns/min-ui",
   "engines": {
     "atom": ">0.40.0"
   }
