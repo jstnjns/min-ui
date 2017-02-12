@@ -1,16 +1,31 @@
 @import "ui-variables";
 
 .settings-view {
+  .section {
+    border-top: 5px solid darken(@app-background-color, 3%);
+
+    &,
+    &:first-child,
+    &:last-child {
+      padding: 40px;
+    }
+  }
+
+  .sub-section {
+    margin: 40px 0;
+  }
 
   .config-menu {
     background: darken(@app-background-color, 3%);
     border: none;
-  }
 
+    .nav > li.active > a {
+      background: @app-background-color;
+    }
+  }
 
   .package-card {
     padding: 10px;
     border: none;
   }
-
 }

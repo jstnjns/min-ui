@@ -3,6 +3,22 @@
 .tree-view {
   background: @tree-view-background-color;
 
+  .project-root {
+    &:before {
+      height: @tab-height;
+    }
+
+    &.selected {
+      &:before {
+        background: transparent;
+      }
+    }
+
+    > .header {
+      line-height: @tab-height !important;
+    }
+  }
+
   .selected {
     &:before {
       background: @tree-view-background-color-active;
